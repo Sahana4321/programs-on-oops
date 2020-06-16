@@ -1,0 +1,81 @@
+1.Program to find area of rectangle:
+class rectangle:
+    def __init__(self,breadth,length):
+        self.breadth=breadth
+        self.length=length
+    def area(self): 
+        return self.breadth*self.length
+a=int(input("Enter length of rectangle"))
+b=int(input("Enter breadth of rectangle"))
+obj=rectangle(a,b)
+print("Area of rectangle:",obj.area())
+print()
+
+--> Output:-
+Enter length of rectangle 5
+Enter breadth of rectangle 4 
+Area of rectangle: 20
+
+
+2.Program to print first name and last name:
+class person:
+    def __init__(self,fname,lname):
+        self.firstname=fname
+        self.lastname=lname
+    def printname(self):
+        print(self.firstname,self.lastname)
+x=person("John","Doe")
+x.printname()
+        
+-->Output:-
+John Doe
+
+3.Program to count no of objects of class:
+class person:
+    count=0
+    def __init__(self):
+        person.count=person.count+1
+p1=person()
+p2=person()
+p3=person()
+print("The number of Person :",person.count)
+        
+-->Output:-The number of Person : 3
+
+4.Program on constructor to print student details:
+class student:
+    def __init__(self,name,id,college):
+        self.name=name
+        self.id=id
+        self.college=college
+    def display_details(self):
+        print("Student Details")
+        print("Student Name :",self.name)
+        print("Student Id :",self.id)
+        print("Student College :",self.college)
+student=student("Abc",1001,"Jain college")
+student.display_details()
+
+-->Output:-
+Student Details
+Student Name : Abc
+Student Id : 1001
+Student College : Jain college
+
+5.Program to print Employee name,id,salary:
+class Person:
+    def __init__(self,name,id):
+        self.name=name
+        self.id=id
+    def display(self):
+        print(self.name,self.id)
+class Employee(Person):
+    def __init__(self,name,id,salary):
+        self.salary=salary
+        Person. __init__(self,name,id)
+    def display1(self):
+        print(self.name,self.id,self.salary)
+c1=Employee("abc",100,10000)
+c1.display1()
+-->Output:-
+abc 100 10000
